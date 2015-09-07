@@ -9,7 +9,7 @@ $dotenv->load();
 <html>
   <head></head>
   <body>
-    <h1>Pusher Presence Channel Code Sample</h1>
+    <h1>Pusher Private Channel Code Sample</h1>
     
     <script src="//js.pusher.com/3.0/pusher.min.js"></script>
     <script>
@@ -18,24 +18,15 @@ $dotenv->load();
       };
     
       var options = {
-        authEndpoint: './presence_server.php'
+        authEndpoint: './private_server.php'
       };
       var appKey = '<?php echo( getenv('PUSHER_APP_KEY') ); ?>';
       var pusher = new Pusher(appKey, options);
       
-      var presenceChannel = pusher.subscribe('presence-my-channel');
-      presenceChannel.bind('pusher:subscription_succeeded', function(members) {
+      var privateChannel = pusher.subscribe('private-my-channel');
+      privateChannel.bind('pusher:subscription_succeeded', function() {
         console.log('Success!');
-        members.each(addMember);
       });
-      
-      function addMember(member) {
-        console.log('addMember: ', member.id, member.info);
-      }
-      
-      function removeMember(member) {
-        console.log('removeMember: ', member.id, member.info);
-      }
     </script>
   </body>
 </html>
