@@ -6,7 +6,7 @@ This repo gives you the absolute basics required to get started. It doesn't prov
 
 ## Installation
 
-From the directory you've cloned into install the example dependencies.
+From the directory you've cloned into, install the example dependencies using [Composer](https://getcomposer.org/):
 
 ```
 $ composer install
