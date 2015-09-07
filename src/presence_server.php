@@ -10,6 +10,19 @@ $appSecret = getenv('PUSHER_APP_SECRET');
 
 $pusher = new Pusher($appKey, $appSecret, $appId);
 
+/*
+Uncomment this to have internal Pusher PHP library logging
+information echoed in the response to the incoming request
+*/
+
+// class EchoLogger {
+//   public function log($msg) {
+//     echo($msg);
+//   }
+// }
+// 
+// $pusher->set_logger(new EchoLogger());
+
 $channelName = $_POST['channel_name'];
 $socketId = $_POST['socket_id'];
 
