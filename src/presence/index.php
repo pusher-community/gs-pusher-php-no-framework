@@ -18,7 +18,7 @@ $dotenv->load();
     <h1>Pusher Presence Channel Code Sample</h1>
     
     <p class="description">
-      <a href="https://pusher.com/docs/presence_channels">Presence channels</a> provide real-time information about other users that are subscribed to the channel. You receive an initial list of users via the <code>pusher:subscription_succeeded</code> event, events when users come online via <code>pusher:member_added</code> and events when users go offline via <code>pusher:member_removed</code>.
+      <a href="https://pusher.com/docs/presence_channels">Presence channels</a> are channels that require authentication, much like private channels. They provide real-time information about other users that are subscribed to the channel. You receive an initial list of users via the <code>pusher:subscription_succeeded</code> event, events when users come online via <code>pusher:member_added</code> and events when users go offline via <code>pusher:member_removed</code>.
     </p>
     
     <p class="use-case">
