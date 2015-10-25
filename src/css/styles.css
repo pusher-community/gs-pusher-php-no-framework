@@ -1,0 +1,11 @@
+body {
+  color: #626869;
+  font-size: 18px;
+  font-weight: 200;
+  font-family: "Source Sans Pro", helvetica, arial, sans-serif;
+}
+
+h1, h2, h3, p {
+  padding: 0;
+  margin: 20px;
+}
