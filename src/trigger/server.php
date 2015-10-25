@@ -1,7 +1,7 @@
 <?php
-require('../vendor/autoload.php');
+require('../../vendor/autoload.php');
 
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = new Dotenv\Dotenv('../../');
 $dotenv->load();
 
 $appId = getenv('PUSHER_APP_ID');
@@ -23,19 +23,22 @@ information echoed in the response to the incoming request
 // 
 // $pusher->set_logger(new EchoLogger());
 
-$channelName = $_POST['channel_name'];
-$socketId = $_POST['socket_id'];
-
 /*
 TODO: implement checks to determine if the user is:
 1. Authenticated with the app
-2. Allowed to subscribe to the $channelName
+2. Allowed to trigger on the channel
 3. Sanitize any additional data that has been recieved and is to be used
 
 If so, proceed...
 */
 
-$auth = $pusher->socket_auth($channelName, $socketId);
+$messageFromUser = $_POST['message'];
+$eventData = ['message' => $messageFromUser];
 
-header('Content-Type: application/json');
-echo($auth);
+$result = $pusher->trigger('my-channel', 'my-event', $eventData);
+
+/*
+Uncomment this to have the HTTP Pusher API response
+information echoed in the response to the incoming request
+*/
+// echo($result);

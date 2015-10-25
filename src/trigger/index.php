@@ -1,7 +1,7 @@
 <?php
-require('../vendor/autoload.php');
+require('../../vendor/autoload.php');
 
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = new Dotenv\Dotenv('../../');
 $dotenv->load();
 ?>
 
@@ -9,11 +9,13 @@ $dotenv->load();
 <html>
   <head></head>
   <body>
+    <?php require_once('../_includes/menu.inc.php'); ?>
+    
     <h1>Pusher Trigger Event Code Sample</h1>
     
     <p>Please note, this example also uses jQuery from a CDN.</p>
     
-    <form id="trigger_form" method="post" action="./trigger_server.php">
+    <form id="trigger_form" method="post" action="./server.php">
       <input id="trigger_message" type="text" name="message" />
       <input type="submit" value="Trigger" />
     </form>

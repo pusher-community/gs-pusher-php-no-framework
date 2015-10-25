@@ -1,7 +1,7 @@
 <?php
-require('../vendor/autoload.php');
+require('../../vendor/autoload.php');
 
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = new Dotenv\Dotenv('../../');
 $dotenv->load();
 ?>
 
@@ -9,6 +9,8 @@ $dotenv->load();
 <html>
   <head></head>
   <body>
+    <?php require_once('../_includes/menu.inc.php'); ?>
+    
     <h1>Pusher Presence Channel Code Sample</h1>
     
     <script src="//js.pusher.com/3.0/pusher.min.js"></script>

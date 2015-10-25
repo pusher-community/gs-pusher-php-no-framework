@@ -1,7 +1,7 @@
 <?php
-require('../vendor/autoload.php');
+require('../../vendor/autoload.php');
 
-$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv = new Dotenv\Dotenv('../../');
 $dotenv->load();
 
 $appId = getenv('PUSHER_APP_ID');
@@ -35,16 +35,7 @@ TODO: implement checks to determine if the user is:
 If so, proceed...
 */
 
-$userId = uniqid('user_');
-$userInfo = [
-  'website' => 'http://www.leggetter.co.uk',
-  'company' => 'Pusher',
-  'job_title' => 'Head of Developer Relations',
-  'is_active' => true,
-  'email' => 'phil@pusher.com'
-];
-
-$auth = $pusher->presence_auth($channelName, $socketId, $userId, $userInfo);
+$auth = $pusher->socket_auth($channelName, $socketId);
 
 header('Content-Type: application/json');
 echo($auth);
