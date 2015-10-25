@@ -5,7 +5,13 @@ body {
   font-family: "Source Sans Pro", helvetica, arial, sans-serif;
 }
 
-h1, h2, h3, p {
+body > h1, 
+body > h2, 
+body > h3, 
+body > p, 
+body > form, 
+body > input, 
+body > button {
   padding: 0;
   margin: 20px;
 }
