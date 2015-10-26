@@ -1,5 +1,5 @@
 {
-  "name": "Pusher and PHP example app (No Framework)",
+  "name": "Pusher and PHP example app",
   "description": "A barebones Pusher and PHP app",
   "repository": "https://github.com/pusher-community/gs-pusher-php-no-framework",
   "logo": "https://github.com/pusher-community/gs-pusher-php-no-framework/raw/master/docs/pusher_logo_p_dark.png",
