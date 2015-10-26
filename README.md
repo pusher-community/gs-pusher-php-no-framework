@@ -12,8 +12,10 @@ This repo gives you the absolute basics required to get started. It doesn't prov
 
 **Todo:**
 
-* How to receive and incoming WebHook
+* Triggering the same event on multiple channels
 * How to trigger an event from your client (client events)
+* Querying application state
+* How to receive and incoming WebHook
 
 ## Installation
 
@@ -42,3 +44,9 @@ $ php -S localhost:9000 -t src
 Navigate to `localhost:9000` (or the URL you choose to use) and take a look at the examples. View the JavaScript console for a log from the Pusher JavaScript library.
 
 ![](./docs/presence-log.png)
+
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Make sure you've got the required environmental variables set up!
