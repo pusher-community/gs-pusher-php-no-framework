@@ -1,8 +1,6 @@
 <?php
 require('../../vendor/autoload.php');
-
-$dotenv = new Dotenv\Dotenv('../../');
-$dotenv->load();
+require('../_includes/config.php');
 
 $appId = getenv('PUSHER_APP_ID');
 $appKey = getenv('PUSHER_APP_KEY');

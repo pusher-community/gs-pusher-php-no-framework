@@ -1,8 +1,6 @@
 <?php
 require('../../vendor/autoload.php');
-
-$dotenv = new Dotenv\Dotenv('../../');
-$dotenv->load();
+require('../_includes/config.php');
 ?>
 
 <!DOCTYPE html>
