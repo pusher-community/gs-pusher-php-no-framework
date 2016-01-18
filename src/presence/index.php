@@ -1,8 +1,6 @@
 <?php
 require('../../vendor/autoload.php');
-require('../_includes/config.php');
-?>
-
+require('../_includes/config.php'); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -44,7 +42,7 @@ require('../_includes/config.php');
       var options = {
         authEndpoint: './server.php'
       };
-      var appKey = '<?php echo( getenv('PUSHER_APP_KEY') ); ?>';
+      var appKey = '<?php echo getenv('PUSHER_APP_KEY'); ?>';
       var pusher = new Pusher(appKey, options);
       
       /*

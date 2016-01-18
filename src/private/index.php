@@ -1,8 +1,6 @@
 <?php
 require('../../vendor/autoload.php');
-require('../_includes/config.php');
-?>
-
+require('../_includes/config.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +18,7 @@ require('../_includes/config.php');
     </p>
     
     <p class="use-case">
-      Private channnels are exactly like public channels, except they require you to authenticate the subscription. The most common use case for private channels is to protect private user or system information.
+      Private channels are exactly like public channels, except they require you to authenticate the subscription. The most common use case for private channels is to protect private user or system information.
     </p>
     
     <p>
@@ -47,7 +45,7 @@ require('../_includes/config.php');
       var options = {
         authEndpoint: './server.php'
       };
-      var appKey = '<?php echo( getenv('PUSHER_APP_KEY') ); ?>';
+      var appKey = '<?php echo getenv('PUSHER_APP_KEY'); ?>';
       var pusher = new Pusher(appKey, options);
       
       /*

@@ -28,7 +28,7 @@ $socketId = $_POST['socket_id'];
 TODO: implement checks to determine if the user is:
 1. Authenticated with the app
 2. Allowed to subscribe to the $channelName
-3. Sanitize any additional data that has been recieved and is to be used
+3. Sanitize any additional data that has been received and is to be used
 
 If so, proceed...
 */
